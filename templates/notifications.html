@@ -1,1 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(135deg, #4CAF50, #2ecc71);
+}
+
+/* HEADER */
+.header {
+    padding: 20px;
+    padding-top: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.back {
+    font-size: 22px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+    padding: 15px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+/* EMPTY */
+.empty {
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+<span class="back" onclick="history.back()">⬅</span>
+<h2>🔔 Notifications</h2>
+</div>
+
+<div class="container">
+
+{% if requests %}
+
+    {% for r in requests %}
+    <div class="card">
+
+        <h3>📚 {{r.name}}</h3>
+        <p>👤 Requested by: {{r.requester}}</p>
+        <p>⭐ Points: {{r.points}}</p>
+
+        <form method="POST">
+
+            <input type="hidden" name="user" value="{{r.requester}}">
+
+            <!-- 📍 PLACE -->
+            <input type="text" name="place" placeholder="📍 Meeting place" required>
+
+            <!-- 📅 DATE PICKER -->
+            <input type="date" name="date" required>
+
+            <!-- ⏰ TIME PICKER -->
+            <input type="time" name="time" required>
+
+            <!-- 📞 CONTACT -->
+            <input type="text" name="contact" placeholder="📞 Contact number" required>
+
+            <button type="submit">✅ Approve Request</button>
+
+        </form>
+
+    </div>
+    {% endfor %}
+
+{% else %}
+
+<div class="empty">
+<h3>No requests yet 😴</h3>
+<p>When someone requests your books, it will appear here</p>
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
