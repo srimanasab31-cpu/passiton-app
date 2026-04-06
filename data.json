@@ -1,0 +1,263 @@
+{
+    "users": [
+        {
+            "name": "Sri Manasa B",
+            "email": "srimanasa.b31@gmail.com",
+            "password": "12345",
+            "points": 20,
+            "profile_pic": "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+        },
+        {
+            "name": "sri",
+            "email": "sri@gmail.com",
+            "password": "123",
+            "points": 55,
+            "profile_pic": "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+        },
+        {
+            "name": "thilagar",
+            "email": "thilagar@gmail.com",
+            "password": "123456",
+            "points": 40,
+            "profile_pic": "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+        },
+        {
+            "name": "jaya",
+            "email": "jaya@gmail.com",
+            "password": "123",
+            "points": 0
+        },
+        {
+            "name": "swetha",
+            "email": "swetha@gmail.com",
+            "password": "123",
+            "points": 0
+        },
+        {
+            "name": "Chithra",
+            "email": "chithra@gmail.com",
+            "password": "12345",
+            "points": 20
+        },
+        {
+            "name": "Manu",
+            "email": "Manu@gmail.com",
+            "password": "12345",
+            "points": 0
+        }
+    ],
+    "notes": [
+        {
+            "course": "DSA",
+            "content": "Linked List",
+            "owner": "srimanasa.b31@gmail.com",
+            "available": false
+        },
+        {
+            "course": "DSA",
+            "content": "LInked List",
+            "owner": "sri@gmail.com",
+            "available": true
+        },
+        {
+            "course": "Database Management System",
+            "content": "Linked List",
+            "owner": "chithra@gmail.com",
+            "available": true
+        }
+    ],
+    "books": [
+        {
+            "book_name": "STATISTICS FOR ENGINEERING",
+            "author": "Abhraim",
+            "owner": "sri@gmail.com",
+            "available": false
+        },
+        {
+            "book": "Database system",
+            "author": "Navathe",
+            "owner": "thilagar@gmail.com",
+            "available": false
+        },
+        {
+            "book": "Compilers",
+            "author": "Alfred",
+            "owner": "thilagar@gmail.com",
+            "available": true
+        },
+        {
+            "book": "Database system",
+            "author": "Navathe",
+            "owner": "chithra@gmail.com",
+            "available": true
+        },
+        {
+            "book": "Data communicatiom and networks",
+            "author": "Shyam",
+            "owner": "thilagar@gmail.com",
+            "available": true
+        }
+    ],
+    "requests": [
+        {
+            "material_type": "note",
+            "material_name": "DSA",
+            "owner": "srimanasa.b31@gmail.com",
+            "requested_by": "sri@gmail.com",
+            "requester_points": 0,
+            "status": "Approved",
+            "destination": "PRP",
+            "contact": "9442808533"
+        },
+        {
+            "material_type": "note",
+            "material_name": "DSA",
+            "owner": "srimanasa.b31@gmail.com",
+            "requested_by": "sri@gmail.com",
+            "requester_points": 0,
+            "status": "Approved",
+            "destination": "PRP",
+            "contact": "9442808533"
+        },
+        {
+            "material_type": "note",
+            "material_name": "DSA",
+            "owner": "srimanasa.b31@gmail.com",
+            "requested_by": "sri@gmail.com",
+            "requester_points": 30,
+            "status": "Approved",
+            "destination": "PRP",
+            "contact": "9442808533"
+        },
+        {
+            "material_type": "note",
+            "material_name": "DSA",
+            "owner": "srimanasa.b31@gmail.com",
+            "requested_by": "thilagar@gmail.com",
+            "requester_points": 0,
+            "status": "Rejected",
+            "destination": "",
+            "contact": ""
+        },
+        {
+            "material_type": "book",
+            "material_name": "STATISTICS FOR ENGINEERING",
+            "owner": "sri@gmail.com",
+            "requested_by": "thilagar@gmail.com",
+            "requester_points": 0,
+            "status": "Approved",
+            "destination": "PRP",
+            "contact": "9442808533"
+        },
+        {
+            "type": "book",
+            "name": "Database system",
+            "owner": "thilagar@gmail.com",
+            "requester": "srimanasa.b31@gmail.com",
+            "points": 20,
+            "status": "approved",
+            "place": "PRP",
+            "time": "2026-03-17T16:00",
+            "contact": "9442808533"
+        },
+        {
+            "type": "book",
+            "name": "Compilers",
+            "owner": "thilagar@gmail.com",
+            "requester": "sri@gmail.com",
+            "points": 45,
+            "status": "approved",
+            "place": "PRP",
+            "time": "17:38",
+            "contact": "9442808533"
+        },
+        {
+            "type": "book",
+            "name": "Compilers",
+            "owner": "thilagar@gmail.com",
+            "requester": "srimanasa.b31@gmail.com",
+            "points": 20,
+            "status": "rejected",
+            "place": "",
+            "time": "",
+            "contact": ""
+        },
+        {
+            "type": "book",
+            "name": "Compilers",
+            "owner": "thilagar@gmail.com",
+            "requester": "sri@gmail.com",
+            "points": 55,
+            "status": "approved",
+            "place": "PRP",
+            "time": "17:38",
+            "contact": "9442808533"
+        },
+        {
+            "type": "book",
+            "name": "Compilers",
+            "owner": "thilagar@gmail.com",
+            "requester": "Manu@gmail.com",
+            "points": 0,
+            "status": "rejected",
+            "place": "",
+            "time": "",
+            "contact": ""
+        },
+        {
+            "type": "book",
+            "name": "Database system",
+            "owner": "chithra@gmail.com",
+            "requester": "chithra@gmail.com",
+            "points": 20,
+            "status": "approved",
+            "place": "PRP",
+            "time": "16:35",
+            "contact": "9442808533"
+        },
+        {
+            "type": "book",
+            "name": "Compilers",
+            "owner": "thilagar@gmail.com",
+            "requester": "chithra@gmail.com",
+            "points": 20,
+            "status": "rejected",
+            "place": "",
+            "time": "",
+            "contact": ""
+        },
+        {
+            "type": "book",
+            "name": "Compilers",
+            "owner": "thilagar@gmail.com",
+            "requester": "chithra@gmail.com",
+            "points": 20,
+            "status": "rejected",
+            "place": "",
+            "time": "",
+            "contact": ""
+        },
+        {
+            "type": "book",
+            "name": "Data communicatiom and networks",
+            "owner": "thilagar@gmail.com",
+            "requester": "chithra@gmail.com",
+            "points": 20,
+            "status": "pending",
+            "place": "",
+            "time": "",
+            "contact": ""
+        },
+        {
+            "type": "book",
+            "name": "Data communicatiom and networks",
+            "owner": "thilagar@gmail.com",
+            "requester": "Manu@gmail.com",
+            "points": 0,
+            "status": "pending",
+            "place": "",
+            "time": "",
+            "contact": ""
+        }
+    ]
+}

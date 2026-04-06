@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/style.css">
+
+<style>
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #4CAF50, #2ecc71);
+    color: white;
+    padding: 25px;
+    padding-top: 40px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+/* CONTAINER */
+.container {
+    padding: 15px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* GRID ITEMS */
+.grid div {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 15px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.grid div:active {
+    transform: scale(0.95);
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.08);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+<h2>👋 Hello {{user.name}}</h2>
+<p>⭐ Points: {{user.points}}</p>
+</div>
+
+<div class="container">
+
+<!-- ACTION GRID -->
+<div class="grid">
+
+<div onclick="location.href='/donate'">
+📚<br>Donate
+</div>
+
+<div onclick="location.href='/search'">
+🔍<br>Search
+</div>
+
+<div onclick="location.href='/notifications'">
+🔔<br>Notifications {% if count > 0 %} ({{count}}) {% endif %}
+</div>
+
+<div onclick="location.href='/tracking'">
+📦<br>Tracking
+</div>
+
+<div onclick="location.href='/leaderboard'">
+🏆<br>Leaderboard
+</div>
+
+<div onclick="location.href='/profile'">
+👤<br>Profile
+</div>
+
+</div>
+
+<!-- INFO SECTION -->
+<div class="card">
+<h3>🚀 How It Works</h3>
+<p>📚 Donate books & notes</p>
+<p>🏆 Earn points</p>
+<p>🤝 Help others</p>
+<p>⭐ Get priority access</p>
+</div>
+
+
+
+
+</div>
+
+</body>
+</html>

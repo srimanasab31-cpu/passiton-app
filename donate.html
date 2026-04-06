@@ -1,0 +1,66 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/style.css">
+
+<!-- HEADER -->
+<div class="header">
+<a href="/dashboard" class="back-btn">⬅</a>
+<h2>📤 Donate Resource</h2>
+<p>Share and earn points</p>
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<form method="post">
+
+<!-- TYPE SELECT (SAME UI) -->
+<label><b>Select Type</b></label>
+<select id="type" name="type" onchange="toggleForm()">
+<option value="note">📝 Notes</option>
+<option value="book">📚 Book</option>
+</select>
+
+<!-- NOTES FORM -->
+<div id="noteForm">
+<h3>📝 Notes Details</h3>
+<input name="course" placeholder="Course Name">
+<input name="content" placeholder="Topics Covered">
+</div>
+
+<!-- BOOK FORM -->
+<div id="bookForm" style="display:none;">
+<h3>📚 Book Details</h3>
+<input name="book" placeholder="Book Name">
+<input name="author" placeholder="Author Name">
+</div>
+
+<button type="submit">🚀 Submit</button>
+
+</form>
+
+</div>
+
+<!-- BENEFITS -->
+<div class="card" style="text-align:center;">
+<h3>🎁 Benefits</h3>
+<p>Earn 10 points for upload</p>
+<p>Get bonus on approval</p>
+<p>Help your friends 🤝</p>
+</div>
+
+</div>
+
+<script>
+function toggleForm() {
+    let type = document.getElementById("type").value;
+
+    if (type === "note") {
+        document.getElementById("noteForm").style.display = "block";
+        document.getElementById("bookForm").style.display = "none";
+    } else {
+        document.getElementById("noteForm").style.display = "none";
+        document.getElementById("bookForm").style.display = "block";
+    }
+}
+</script>
