@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+<a href="/dashboard" class="back-btn">⬅</a>
+<h2>📦 Tracking</h2>
+<p>Track your requests & donations</p>
+</div>
+
+<div class="container">
+
+{% if requests|length == 0 %}
+<div class="card" style="text-align:center;">
+<h3>No Activity Yet 😴</h3>
+<p>Your requests and approvals will appear here</p>
+</div>
+{% endif %}
+
+{% for r in requests %}
+
+<div class="tracking-card">
+
+<!-- TITLE -->
+<h3>
+{% if r.type == "book" %}
+📚 {{r.name}}
+{% else %}
+📝 {{r.name}}
+{% endif %}
+</h3>
+
+<!-- DETAILS -->
+<p>👤 Requester: {{r.requester}}</p>
+<p>📌 Status: 
+    {% if r.status == "approved" %}
+        <span style="color:green;">Approved ✅</span>
+    {% elif r.status == "rejected" %}
+        <span style="color:red;">Rejected ❌</span>
+    {% else %}
+        <span style="color:orange;">Pending ⏳</span>
+    {% endif %}
+</p>
+
+<!-- EXTRA DETAILS -->
+{% if r.status == "approved" %}
+<p>📍 Place: {{r.place}}</p>
+<p>⏰ Time: {{r.time}}</p>
+<p>📞 Contact: {{r.contact}}</p>
+{% endif %}
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>
